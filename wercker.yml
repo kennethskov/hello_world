@@ -3,7 +3,7 @@ build:
   base-path: /go/src/github.com/wercker/hello-world
   steps:
     - script:
-        name: Get app dependencies 
+        name: Get app dependencies
         code: go get
 
     - script:
