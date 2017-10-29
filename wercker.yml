@@ -57,10 +57,5 @@ deploy-to-cluster:
 
     - kubectl:
         name: deploy to kubernetes
-#        server: $KUBERNETES_MASTER
-#        #username: $KUBERNETES_USERNAME
-#        token: $KUBERNETES_TOKEN
-#        insecure-skip-tls-verify: true
-#         config: kubeconfig
-#        command: apply -f kubernetes.yml
-         command: version
+        raw-global-args: --kubeconfig kubeconfig 
+        command: version
