@@ -56,7 +56,7 @@ inject-secret:
         certificate-authority: ca.pem
         client-certificate: admin.pem
         client-key: admin-key.pem
-        command: create secret docker-registry wercker --docker-server=$DOCKER_REGISTRY --docker-username=$DOCKER_USERNAME --docker-password=$DOCKER_PASSWORD --docker-email=$DOCKER_EMAIL; echo create registry secret
+        command: create secret docker-registry wercker --docker-server=$DOCKER_SERVER --docker-username=$DOCKER_USERNAME --docker-password=$DOCKER_PASSWORD --docker-email=$DOCKER_EMAIL; echo create registry secret
          
 deploy-to-cluster:
   box:
