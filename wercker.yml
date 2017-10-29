@@ -29,10 +29,27 @@ inject-secret:
     cmd: /bin/sh
   steps:   
     - bash-template
+    - create-file:
+      name: Create ca.pem
+      filename: ca.pem
+      content: $KUBERNETES_ROOR_CA_PEM
+
+    - create-file:
+      name: Create admin.pem
+      filename: admin.pem
+      content: $KUBERNETES_ADMIN_PEM
+
+    - create-file:
+      name: Create admin-key.pem
+      filename: admin-key.pem
+      content: $KUBERNETES_ADMIN_KEY_PEM        
+
     - kubectl:
         name: delete secret
         debug: true
-        raw-global-args: --kubeconfig ./kubeconfig 
+        certificate-authority: ca.pem
+        client-certificate: admin.pem
+        client-key: admin-key.pem
         command: delete secret wercker; echo delete registry secret
          
     - kubectl:
