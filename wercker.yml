@@ -31,7 +31,7 @@ inject-secret:
     - bash-template
     - kubectl:
         name: delete secret
-        raw-global-args: --kubeconfig kubeconfig 
+        raw-global-args: --kubeconfig ./kubeconfig 
         command: delete secret wercker; echo delete registry secret
          
     - kubectl:
