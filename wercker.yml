@@ -54,7 +54,6 @@ deploy-to-cluster:
 
     - kubectl:
         name: deploy to kubernetes
-        username: $KUBERNETES_USERNAME
-        user: $KUBERNETES_USERNAME        
+        username: $KUBERNETES_USERNAME  
         raw-global-args: --kubeconfig kubeconfig 
         command: apply -f kubernetes.yml
