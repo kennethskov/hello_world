@@ -38,4 +38,4 @@ deploy-to-cluster:
         name: deploy to kubernetes
         username: $KUBERNETES_USERNAME
         raw-global-args: --kubeconfig kubeconfig 
-        command: version
+        command: apply -f kubernetes.yml
