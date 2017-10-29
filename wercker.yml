@@ -63,4 +63,4 @@ deploy-to-cluster:
 #        insecure-skip-tls-verify: true
 #         config: kubeconfig
 #        command: apply -f kubernetes.yml
-         command: --kubeconfig kubeconfig version
+         command: version
