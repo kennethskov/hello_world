@@ -74,4 +74,4 @@ deploy-to-cluster:
         certificate-authority: ca.pem
         client-certificate: admin.pem
         client-key: admin-key.pem        
-        command: apply -f kubernetes.yml
+        command: apply -f kubernetes.yml 
