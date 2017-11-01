@@ -40,7 +40,7 @@ spec:
   selector:
     app: hello-world
     commit: ${WERCKER_GIT_COMMIT}
-   tpye: NodePort
+   type: NodePort
 #  type: LoadBalancer
 ---
 #apiVersion: extensions/v1beta1
