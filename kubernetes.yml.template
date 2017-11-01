@@ -40,8 +40,7 @@ spec:
   selector:
     app: hello-world
     commit: ${WERCKER_GIT_COMMIT}
-   type: NodePort
-#  type: LoadBalancer
+  type: NodePort
 ---
 #apiVersion: extensions/v1beta1
 #kind: Ingress
